@@ -68,6 +68,8 @@ function Map() {
   }
 
   useEffect(() => {
+    console.log();
+    
     return () => worldMap?.remove();
   }, [worldMap]);
 
