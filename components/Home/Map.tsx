@@ -46,9 +46,7 @@ function Map() {
     const data = await GetGeolocation();
     console.log(data);
 
-    const accessToken =
-      "pk.eyJ1IjoibWloYWkxOTk5IiwiYSI6ImNtZWJtbjdvcDEyMzEyanF1NWpndm9sN2cifQ.ZlW8FV4ziEIQByiqenAd1w";
-    mapboxgl.accessToken = accessToken;
+    mapboxgl.accessToken = process.env.MAP_API_KEY;
 
     const firstMap = new mapboxgl.Map({
       container: mapContainer.current,
